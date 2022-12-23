@@ -10,6 +10,8 @@
 
 ## Possible solution
 
-- Find a way to override BUILD file. (tried with gazelle build_file_generation = "on" + build_file_name = "BUILD.minimal" + build_extra_args = ["-exclude=**/BUILD"] but original BUILD file was still evaluated.)
-- Try to use 1.18 workspace features, replace original one with a forked version in the same monorepo.
+- Find a way to override BUILD file.
+  - tried with gazelle build_file_generation = "on" + build_file_name = "BUILD.minimal" + build_extra_args = ["-exclude=**/BUILD"] but original BUILD file was still evaluated
+  - tried with gazelle patches, worked but did not solve slow build probably related to other languages' rules
+- Try to use 1.18 workspace features, replace original one with a forked version in the same monorepo (like this one).
 - TODO: something that can be done on upstream?
